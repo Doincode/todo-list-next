@@ -23,7 +23,7 @@ export function ToastComponent({ message, type = 'info', duration = 3000, onClos
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false)
-      onClose && onClose()
+      if (onClose) onClose();
     }, duration)
 
     return () => clearTimeout(timer)
@@ -43,7 +43,7 @@ export function ToastComponent({ message, type = 'info', duration = 3000, onClos
         aria-label="Close"
         onClick={() => {
           setIsVisible(false)
-          onClose && onClose()
+          if (onClose) onClose();
         }}
       >
         <span className="sr-only">Close</span>

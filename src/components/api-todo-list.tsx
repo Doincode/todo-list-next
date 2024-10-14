@@ -30,10 +30,6 @@ export function ApiTodoList() {
   const [editedDescription, setEditedDescription] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    fetchTasks();
-  }, []);
-
   const fetchTasks = async () => {
     setIsLoading(true);
     try {
@@ -52,6 +48,10 @@ export function ApiTodoList() {
       setIsLoading(false);
     }
   };
+  useEffect(() => {
+    fetchTasks();
+  }, []);
+
 
   const addTask = async () => {
     if (newTask.trim() !== "") {
