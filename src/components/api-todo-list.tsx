@@ -68,8 +68,7 @@ export function ApiTodoList() {
         console.error("Error adding task:", error);
         toast({
           title: "Error",
-          description: "Failed to add task. Please try again.",
-          variant: "destructive",
+          description: "Failed to add task. Please try again."
         });
       }
     }
@@ -142,8 +141,7 @@ export function ApiTodoList() {
         console.error("Error updating task:", error);
         toast({
           title: "Error",
-          description: "Failed to update task. Please try again.",
-          variant: "destructive",
+          description: "Failed to update task. Please try again."
         });
       }
     }
