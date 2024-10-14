@@ -41,8 +41,7 @@ export function ApiTodoList() {
       console.error("Error fetching tasks:", error);
       toast({
         title: "Error",
-        description: "Failed to fetch tasks. Please try again later.",
-        variant: "destructive",
+        description: "Failed to fetch tasks. Please try again later."
       });
     } finally {
       setIsLoading(false);
@@ -97,8 +96,7 @@ export function ApiTodoList() {
       console.error("Error toggling task:", error);
       toast({
         title: "Error",
-        description: "Failed to update task. Please try again.",
-        variant: "destructive",
+        description: "Failed to update task. Please try again."
       });
     }
   };
@@ -112,8 +110,7 @@ export function ApiTodoList() {
       console.error("Error deleting task:", error);
       toast({
         title: "Error",
-        description: "Failed to delete task. Please try again.",
-        variant: "destructive",
+        description: "Failed to delete task. Please try again."
       });
     }
   };
